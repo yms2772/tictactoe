@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 1px;
+}
+
+.field {
+    background-color: rgba(0, 0, 0, 0);
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+}
+
+.field:nth-child(2),
+.field:nth-child(5),
+.field:nth-child(8) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.field:nth-child(4),
+.field:nth-child(5),
+.field:nth-child(6) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.computer {
+    color: red;
+}
+
+.computer.remove {
+    background-color: rgba(255, 0, 0, 0.15);
+}
+
+.user {
+    color: blue;
+}
+
+.user.remove {
+    background-color: rgba(0, 0, 255, 0.15);
+}
